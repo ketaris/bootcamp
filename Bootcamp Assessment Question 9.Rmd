@@ -2,7 +2,9 @@
 title: "Bootcamp Assessment Question 9"
 author: "Katie Taris"
 date: "2022-09-06"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r AOV InsectSprays}
