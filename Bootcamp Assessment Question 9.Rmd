@@ -1,0 +1,28 @@
+---
+title: "Bootcamp Assessment Question 9"
+author: "Katie Taris"
+date: "2022-09-06"
+output: html_document
+---
+
+```{r AOV InsectSprays}
+#Load data
+data(InsectSprays)
+
+#Inspect data
+head(InsectSprays)
+tail(InsectSprays)
+class(InsectSprays$spray)
+
+#Perform Analysis of Variance
+m1 <- aov(formula = count ~ spray, data = InsectSprays)
+m1
+summary(m1)
+#The P-value (written Pr(>F)) is < 0.05 so the spray 
+#types are significant to the insect counts. 
+
+#Create boxplot to visualise data
+boxplot(count ~ spray, data = InsectSprays, main = 
+          "Insect Count Per Spray Type", xlab = 
+          "Spray", ylab = "Insect Count")
+```
